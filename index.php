@@ -1,8 +1,12 @@
 <?php
 
-$qb = require "bootstrap.php";
+$qb = require "core/bootstrap.php";
 
-$tasks = $qb->selectAll('todos');
+$router = new Router;
 
+require 'routes.php';
 
-require 'index.view.php';
+require $router->direct(
+    trim($_SERVER['REQUEST_URI'], '/'),
+    $_SERVER['REQUEST_METHOD']
+);

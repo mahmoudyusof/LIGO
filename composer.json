@@ -1,4 +1,6 @@
 {
+    "name": "hex/hexyway",
+    "description": "The HEXYWAY framework",
     "autoload": {
         "classmap": [
             "./"

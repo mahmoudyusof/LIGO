@@ -8,29 +8,12 @@ App::bind('database', new QueryBuilder(
     Connection::make(App::get('config')['database'])
 ));
 
+$twig = new Twig_Environment(
+    new Twig_Loader_Filesystem('app/views')
+);
 
+// add features to the twig instance here.
 
-
-function twig()
-{
-    $loader = new Twig_Loader_Filesystem('app/views');
-    $twig = new Twig_Environment($loader);
-
-    $bcfilter = new Twig_SimpleFilter("bc", function($string){
-        return password_hash($string, PASSWORD_DEFAULT);
-    });
-
-    $lenfilter = new Twig_SimpleFilter('len', function($string){
-        return strlen($string);
-    });
-
-    $twig->addFilter($bcfilter);
-    $twig->addFilter($lenfilter);
-
-    return $twig;
-}
-
-
-
+App::bind('twig', $twig);
 
 

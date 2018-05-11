@@ -10,6 +10,7 @@ return array(
     'App\\Core\\App' => $baseDir . '/core/App.php',
     'App\\Core\\Request' => $baseDir . '/core/Request.php',
     'App\\Core\\Router' => $baseDir . '/core/Router.php',
+    'App\\Models\\User' => $baseDir . '/app/models/User.php',
     'CallableTestClass' => $vendorDir . '/twig/twig/test/Twig/Tests/Node/Expression/CallTest.php',
     'ComposerAutoloaderInit4924de2321ebd0a9bd3073d046a746fa' => $vendorDir . '/composer/autoload_real.php',
     'Composer\\Autoload\\ClassLoader' => $vendorDir . '/composer/ClassLoader.php',

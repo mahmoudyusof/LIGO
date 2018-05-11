@@ -11,11 +11,14 @@ class QueryBuilder
     }
 
 
-    public function selectAll($table)
+    public function selectAll($table, $model="stdClass")
     {
+        if(! ($model == "stdClass")){
+            $model = "App\\Models\\{$model}";
+        }
         $statement = $this->pdo->prepare("select * from {$table}");
         $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_CLASS);
+        return $statement->fetchAll(PDO::FETCH_CLASS, $model);
     }
 
     public function insert($table, $params)

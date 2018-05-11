@@ -10,19 +10,18 @@ class PagesController
     {
         $tasks = App::get('database')->selectAll('todos');
 
-        $users = App::get('database')->selectAll('users');
-
-        echo twig()->render('index.html', compact('tasks', 'users'));
+        $users = App::get('database')->selectAll('users', 'User');
+        echo App::get('twig')->render('index.html', compact('tasks', 'users'));
     }
 
     public function about()
     {
-        echo twig()->render('about.html');
+        echo App::get('twig')->render('about.html');
     }
 
     public function contact()
     {
-        echo twig()->render('contact.html');
+        echo App::get('twig')->render('contact.html');
     }
 
     public function add_name()

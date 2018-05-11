@@ -4,13 +4,13 @@ require 'vendor/autoload.php';
 
 require "core/bootstrap.php";
 
-$qb = $app['database'];
+use App\Core\{Request, Router};
 
 $router = new Router;
 
 require 'routes.php';
 
-require $router->direct(
+$router->direct(
     Request::uri(),
-    $_SERVER['REQUEST_METHOD']
+    Request::method()
 );

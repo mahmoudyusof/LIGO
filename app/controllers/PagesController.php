@@ -17,12 +17,12 @@ class PagesController
 
     public function about()
     {
-        view('about');
+        echo twig()->render('about.html');
     }
 
     public function contact()
     {
-        view('contact');
+        echo twig()->render('contact.html');
     }
 
     public function add_name()

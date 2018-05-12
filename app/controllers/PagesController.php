@@ -2,36 +2,42 @@
 
 namespace App\Controllers;
 
-use App\Core\App;
+use App\Core\{App, Form};
 
 class PagesController
 {
     public function index()
     {
-        $tasks = App::get('database')->selectAll('todos');
+        $tasks = app()->get('database')->selectAll('todos');
 
-        $users = App::get('database')->selectAll('users', 'User');
-        echo App::get('twig')->render('index.html', compact('tasks', 'users'));
+        $users = app()->get('database')->selectAll('users', 'User');
+        echo app()->render('index', compact('tasks', 'users'));
     }
 
     public function about()
     {
-        echo App::get('twig')->render('about.html');
+        echo app()->render('about');
     }
 
     public function contact()
     {
-        echo App::get('twig')->render('contact.html');
+        echo app()->render('contact');
     }
 
     public function add_name()
     {
-        App::get('database')->insert("users", [
-            "name" => $_POST['name'],
-            "email" => $_POST['email']
-        ]);
-        
-        header('location: /');
+        if(isset($_POST['token'], $_POST['name'], $_POST['email'])){
+            Form::csrf_check($_POST['token']);
+
+            app()->get('database')->insert("users", [
+                "name" => $_POST['name'],
+                "email" => $_POST['email']
+            ]);
+            
+            header('location: /');
+        }else{
+            header('location: /contact');
+        }
     }
 }
 

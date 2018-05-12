@@ -24,7 +24,7 @@ class Router
         if (array_key_exists($uri, $this->routes[$method])){
             return $this->call_action(...explode('@', $this->routes[$method][$uri]));
         }
-        throw new Exception('404 error, man.');
+        throw new \Exception('404 error, man.');
     }
 
     protected function call_action($controller, $action)

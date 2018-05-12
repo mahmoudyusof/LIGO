@@ -45,6 +45,7 @@ class ComposerStaticInit4924de2321ebd0a9bd3073d046a746fa
     public static $classMap = array (
         'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
+        'App\\Core\\Form' => __DIR__ . '/../..' . '/core/Form.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
         'App\\Core\\Router' => __DIR__ . '/../..' . '/core/Router.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/models/User.php',

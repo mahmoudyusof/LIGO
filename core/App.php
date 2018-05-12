@@ -19,5 +19,10 @@ class App
         return static::$registry[$key];
     }
 
+    public function render($template, $args=[])
+    {
+        echo static::get('twig')->render("{$template}.html", $args);
+    }
+
 }
 

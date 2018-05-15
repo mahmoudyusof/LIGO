@@ -9,9 +9,11 @@ $app = new App();
 
 $app->bind('config', require 'config.php');
 
-$app->bind('database', new QueryBuilder(
-    Connection::make($app->get('config')['database'])
-));
+// uncomment this if you want a database connection
+
+// $app->bind('database', new QueryBuilder(
+//     Connection::make($app->get('config')['database'])
+// ));
 
 $twig = new Twig_Environment(
     new Twig_Loader_Filesystem('app/views')

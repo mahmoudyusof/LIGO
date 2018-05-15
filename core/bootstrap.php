@@ -1,7 +1,7 @@
 <?php
 
-use App\Core\App;
-use App\Core\Form;
+use App\Core\{App, Form, Router};
+
 
 session_start();
 
@@ -22,7 +22,12 @@ $csrf_field = new Twig_Function("csrf_field", function(){
     return "<input type='hidden' name='token' value='{$token}'>";
 });
 
+$static = new Twig_Function("static", function($filename){
+    return "/assets/{$filename}";
+});
+
 $twig->addFunction($csrf_field);
+$twig->addFunction($static);
 
 // add features to the twig instance here.
 

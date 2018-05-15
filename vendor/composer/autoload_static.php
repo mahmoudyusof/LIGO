@@ -8,6 +8,7 @@ class ComposerStaticInit4924de2321ebd0a9bd3073d046a746fa
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -19,6 +20,10 @@ class ComposerStaticInit4924de2321ebd0a9bd3073d046a746fa
         array (
             'Symfony\\Polyfill\\Mbstring\\' => 26,
         ),
+        'F' => 
+        array (
+            'FastRoute\\' => 10,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -29,6 +34,10 @@ class ComposerStaticInit4924de2321ebd0a9bd3073d046a746fa
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'FastRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
     );
 
@@ -43,7 +52,7 @@ class ComposerStaticInit4924de2321ebd0a9bd3073d046a746fa
     );
 
     public static $classMap = array (
-        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'App\\Controllers\\WelcomeController' => __DIR__ . '/../..' . '/app/controllers/WelcomeController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Form' => __DIR__ . '/../..' . '/core/Form.php',
         'App\\Core\\Request' => __DIR__ . '/../..' . '/core/Request.php',
@@ -60,6 +69,32 @@ class ComposerStaticInit4924de2321ebd0a9bd3073d046a746fa
         'CorruptCache' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/EnvironmentTest.php',
         'CountableStub' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/IntegrationTest.php',
         'CustomExtensionTest' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/CustomExtensionTest.php',
+        'FastRoute\\BadRouteException' => __DIR__ . '/..' . '/nikic/fast-route/src/BadRouteException.php',
+        'FastRoute\\DataGenerator' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator.php',
+        'FastRoute\\DataGenerator\\CharCountBased' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/CharCountBased.php',
+        'FastRoute\\DataGenerator\\GroupCountBased' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/GroupCountBased.php',
+        'FastRoute\\DataGenerator\\GroupPosBased' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/GroupPosBased.php',
+        'FastRoute\\DataGenerator\\MarkBased' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/MarkBased.php',
+        'FastRoute\\DataGenerator\\RegexBasedAbstract' => __DIR__ . '/..' . '/nikic/fast-route/src/DataGenerator/RegexBasedAbstract.php',
+        'FastRoute\\Dispatcher' => __DIR__ . '/..' . '/nikic/fast-route/src/Dispatcher.php',
+        'FastRoute\\Dispatcher\\CharCountBased' => __DIR__ . '/..' . '/nikic/fast-route/src/Dispatcher/CharCountBased.php',
+        'FastRoute\\Dispatcher\\CharCountBasedTest' => __DIR__ . '/..' . '/nikic/fast-route/test/Dispatcher/CharCountBasedTest.php',
+        'FastRoute\\Dispatcher\\DispatcherTest' => __DIR__ . '/..' . '/nikic/fast-route/test/Dispatcher/DispatcherTest.php',
+        'FastRoute\\Dispatcher\\GroupCountBased' => __DIR__ . '/..' . '/nikic/fast-route/src/Dispatcher/GroupCountBased.php',
+        'FastRoute\\Dispatcher\\GroupCountBasedTest' => __DIR__ . '/..' . '/nikic/fast-route/test/Dispatcher/GroupCountBasedTest.php',
+        'FastRoute\\Dispatcher\\GroupPosBased' => __DIR__ . '/..' . '/nikic/fast-route/src/Dispatcher/GroupPosBased.php',
+        'FastRoute\\Dispatcher\\GroupPosBasedTest' => __DIR__ . '/..' . '/nikic/fast-route/test/Dispatcher/GroupPosBasedTest.php',
+        'FastRoute\\Dispatcher\\MarkBased' => __DIR__ . '/..' . '/nikic/fast-route/src/Dispatcher/MarkBased.php',
+        'FastRoute\\Dispatcher\\MarkBasedTest' => __DIR__ . '/..' . '/nikic/fast-route/test/Dispatcher/MarkBasedTest.php',
+        'FastRoute\\Dispatcher\\RegexBasedAbstract' => __DIR__ . '/..' . '/nikic/fast-route/src/Dispatcher/RegexBasedAbstract.php',
+        'FastRoute\\DummyRouteCollector' => __DIR__ . '/..' . '/nikic/fast-route/test/RouteCollectorTest.php',
+        'FastRoute\\HackTypecheckerTest' => __DIR__ . '/..' . '/nikic/fast-route/test/HackTypechecker/HackTypecheckerTest.php',
+        'FastRoute\\Route' => __DIR__ . '/..' . '/nikic/fast-route/src/Route.php',
+        'FastRoute\\RouteCollector' => __DIR__ . '/..' . '/nikic/fast-route/src/RouteCollector.php',
+        'FastRoute\\RouteCollectorTest' => __DIR__ . '/..' . '/nikic/fast-route/test/RouteCollectorTest.php',
+        'FastRoute\\RouteParser' => __DIR__ . '/..' . '/nikic/fast-route/src/RouteParser.php',
+        'FastRoute\\RouteParser\\Std' => __DIR__ . '/..' . '/nikic/fast-route/src/RouteParser/Std.php',
+        'FastRoute\\RouteParser\\StdTest' => __DIR__ . '/..' . '/nikic/fast-route/test/RouteParser/StdTest.php',
         'FooObject' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/Extension/SandboxTest.php',
         'InvalidOperatorExtension' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/CustomExtensionTest.php',
         'IteratorAggregateStub' => __DIR__ . '/..' . '/twig/twig/test/Twig/Tests/IntegrationTest.php',

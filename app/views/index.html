@@ -1,11 +1,9 @@
-{% extends 'partials/layout.html' %}
+{% extends "layout/main.html" %}
 
-
-{% block content %}
-    {% for user in users  %}
-
-        <li>{{ user.name }} @ &lt; {{ user.email }} &gt;</li>
-
-    {% endfor %}
-
+{% block title %}Home{% endblock %}
+{% block body %}
+    <div class="welcome">
+        <h1>LIGO</h1>
+        <p style="font-weight: 500;">Welcome to the LIGO framework.</p>
+    </div>
 {% endblock %}

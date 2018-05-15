@@ -1,0 +1,50 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #ebebeb;
+}
+nav{
+    background-color: #222;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#brand{
+    color: white;
+    font-family: "Raleway";
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+}
+nav ul{
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* margin: auto 0 auto auto; */
+}
+nav a{
+    padding: 10px;
+    font-family: Raleway;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #e1e1e1;
+    text-decoration: none;
+    display: inline-block;
+}
+nav a:hover{
+    background-color: #000;
+    color: white;
+}
+.container{
+    text-align: center;
+    font-family: Raleway;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 50;
+    position: relative;
+    top: calc(50vh - 150px);
+}
+#greet{
+    font-size: 3rem;
+}

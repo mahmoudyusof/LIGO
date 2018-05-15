@@ -4,19 +4,39 @@ namespace App\Core;
 
 class Router
 {
-    protected $routes = [
-        'GET' => [],
-        'POST' => []
-    ];
+    protected $routes = [];
 
-    public function get($uri, $controller)
+
+    public function get($uri, $ctrl_str)
     {
-        $this->routes['GET'][$uri] = $controller;
+        $ctrl_arr = explode("@", $ctrl_str);
+        array_push($this->routes, [
+            "GET",
+            $uri,
+            [
+                "App\\Controllers\\".$ctrl_arr[0],
+                $ctrl_arr[1]
+            ]
+        ]);
     }
 
-    public function post($uri, $controller)
+    public function post($uri, $ctrl_str)
     {
-        $this->routes['POST'][$uri] = $controller;
+        $ctrl_arr = explode("@", $ctrl_str);
+        array_push($this->routes, [
+            "POST",
+            $uri,
+            [
+                "App\\Controllers\\".$ctrl_arr[0],
+                $ctrl_arr[1]
+            ]
+        ]);
+    }
+
+
+    public function fetchRoutes()
+    {
+        return $this->routes;
     }
 
     public function direct($uri, $method)

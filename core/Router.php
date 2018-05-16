@@ -54,7 +54,7 @@ class Router
         if(! method_exists($controller, $action)){
             throw new Exception("controller {$controller} does not have a {$action} method");
         }
-        return (new $controller)->$action();
+        return $controller->$action();
     }
 
 }

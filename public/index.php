@@ -19,15 +19,6 @@ $dispatcher = fastRoute\simpleDispatcher(function (fastRoute\RouteCollector $r){
 });
 
 
-// Memories I wish I never had
-
-// if(strpos(Request::uri(), ".")){
-//     // die(var_dump(Request::uri(), "first"));
-//     $filepath = __DIR__ . Request::uri();
-//     $filepath = str_ireplace("\\", "/", $filepath);
-//     echo Request::serve_static($filepath);
-// }else{
-    // die(var_dump(Request::uri(), "second"));
 $routeinfo = $dispatcher->dispatch(Request::method(), Request::uri());
 switch ($routeinfo[0]){
     case FastRoute\Dispatcher::NOT_FOUND:
@@ -52,12 +43,4 @@ switch ($routeinfo[0]){
         {
             die(var_dump($routeinfo));
         }
-    // }
 }
-
-// die(var_dump($routeinfo[1]));
-
-// $router->direct(
-//     Request::uri(),
-//     Request::method()
-// );

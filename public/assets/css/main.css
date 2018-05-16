@@ -5,7 +5,7 @@ body{
 }
 nav{
     background-color: #222;
-    padding: 0 30px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +24,7 @@ nav ul{
     /* margin: auto 0 auto auto; */
 }
 nav a{
-    padding: 10px;
+    padding: 15px 20px;
     font-family: Raleway;
     font-style: italic;
     font-size: 1.3rem;

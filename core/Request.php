@@ -27,20 +27,6 @@ class Request
     {
         return $_SERVER['REQUEST_METHOD'];
     }
-
-    public static function serve_static($filename)
-    {
-        if(file_exists($filename)){
-            $handler = fopen($filename, "r");
-            $content = fread($handler, filesize($filename));
-            $content_type = explode(".", $filename)[1];
-            if(array_key_exists($content_type, self::$content)){
-                header("Content-Type: " . self::$content[$content_type]);
-            }
-            // header("Remote-Address: 127001:8888");
-            return $content;
-        }
-    }
 }
 
 

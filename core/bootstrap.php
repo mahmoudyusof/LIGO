@@ -7,7 +7,7 @@ session_start();
 
 $app = new App();
 
-$app->bind('config', require 'config.php');
+$app->bind('config', require __DIR__ . '/../config.php');
 
 // uncomment this if you want a database connection
 
@@ -16,7 +16,7 @@ $app->bind('config', require 'config.php');
 // ));
 
 $twig = new Twig_Environment(
-    new Twig_Loader_Filesystem('app/views')
+    new Twig_Loader_Filesystem(__DIR__ . '/../app/views')
 );
 
 $csrf_field = new Twig_Function("csrf_field", function(){

@@ -42,8 +42,13 @@ nav a:hover{
     font-size: 1.3rem;
     font-style: italic;
     font-weight: 50;
-    position: relative;
-    top: calc(50vh - 150px);
+    margin: 20px;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 10px;
 }
 #greet{
     font-size: 3rem;

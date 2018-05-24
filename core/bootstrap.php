@@ -1,6 +1,7 @@
 <?php
 
 use App\Core\{App, Form, Router};
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 
 session_start();
@@ -11,9 +12,11 @@ $app->bind('config', require __DIR__ . '/../config.php');
 
 // uncomment this if you want a database connection
 
-// $app->bind('database', new QueryBuilder(
-//     Connection::make($app->get('config')['database'])
-// ));
+$capsule = new Capsule;
+$capsule->addConnection($app->get('config')['db-conf']);
+$capsule->bootEloquent();
+
+$app->bind('database', $capsule);
 
 $twig = new Twig_Environment(
     new Twig_Loader_Filesystem(__DIR__ . '/../app/views')

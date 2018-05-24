@@ -41,6 +41,6 @@ switch ($routeinfo[0]){
             }
         }catch(Exception $e)
         {
-            die(var_dump($routeinfo));
+            echo "Looks like something went wrong";
         }
 }

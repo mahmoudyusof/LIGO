@@ -1,0 +1,10 @@
+{% extends "layout/main.html" %}
+
+{% block title %}Show{% endblock %}
+{% block body %}
+    <div class="welcome">
+        {% for user in users %}
+        {{ user.name | capitalize }} @ &lt;{{ user.email }}&gt;<br><br>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,20 +1,9 @@
 <?php
 
 namespace App\Models;
+use Illuminate\Database\Eloquent\Model;
 
-class User
+class User extends Model 
 {
-    public $pk;
-    public $name;
-    public $email;
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function getEmail()
-    {
-        return $this->email;
-    }
+    // test inserts, bitch.
 }

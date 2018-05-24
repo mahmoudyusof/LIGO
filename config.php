@@ -1,14 +1,13 @@
 <?php
 
 return [
-    "database" => [
-        "name" => 'database name',
-        "user" => 'username',
-        "password" => 'password',
-        'connection' => "mysql:host=put host here",
-        "options"=> [
-            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION // remove this line before deployment.
-        ]
+    "db-conf" => [
+        "driver" => "mysql",
+        "host" => "localhost",
+        "database" => "mytodo",
+        "username" => "root",
+        "password" => "",
+        "charset" => "utf8"
     ]
 ];
 

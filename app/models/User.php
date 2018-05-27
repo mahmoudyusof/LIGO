@@ -5,5 +5,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model 
 {
-    // test inserts, bitch.
+    protected $fillable = ["name", "email"];
 }

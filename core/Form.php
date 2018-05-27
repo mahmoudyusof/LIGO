@@ -2,6 +2,8 @@
 
 namespace App\Core;
 
+use App\Core\Request;
+
 class Form
 {
     public static function csrf_generate()

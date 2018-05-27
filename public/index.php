@@ -41,6 +41,6 @@ switch ($routeinfo[0]){
             }
         }catch(Exception $e)
         {
-            echo "Looks like something went wrong";
+            echo $e->getMessage();
         }
 }

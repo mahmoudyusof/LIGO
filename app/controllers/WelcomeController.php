@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\User;
+use App\Core\Form;
 
 class WelcomeController
 {
@@ -18,6 +19,25 @@ class WelcomeController
     {
         $users = User::where("id", "<", "3")->get();
         echo app()->render("show", compact("users"));
+    }
+
+    public function add()
+    {
+        echo app()->render("add");
+    }
+
+    public function create()
+    {
+        // fix CSRF later.
+        
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $user = User::create([
+            "name" => $name,
+            "email" => $email
+        ]);
+        $user->save();
+        header('location: /');
     }
 }
 

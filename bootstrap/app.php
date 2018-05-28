@@ -19,7 +19,7 @@ $capsule->bootEloquent();
 $app->bind('database', $capsule);
 
 $twig = new Twig_Environment(
-    new Twig_Loader_Filesystem(__DIR__ . '/../app/views')
+    new Twig_Loader_Filesystem(__DIR__ . '/../views')
 );
 
 $csrf_field = new Twig_Function("csrf_field", function(){

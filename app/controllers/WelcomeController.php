@@ -3,6 +3,7 @@
 namespace App\Controllers;
 use App\Models\User;
 use App\Core\Form;
+use App\Core\Request;
 
 class WelcomeController
 {

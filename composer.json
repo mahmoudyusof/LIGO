@@ -2,9 +2,9 @@
     "name": "hex/hexyway",
     "description": "The HEXYWAY framework",
     "autoload": {
-        "classmap": [
-            "./"
-        ]
+        "psr-4": {
+            "App\\": "app/"
+        }
     },
     "require": {
         "twig/twig": "^2.4",

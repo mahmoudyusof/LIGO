@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+
 use App\Core\{App, Form, Router};
 use Illuminate\Database\Capsule\Manager as Capsule;
 
@@ -14,6 +16,7 @@ $app->bind('config', require __DIR__ . '/../config.php');
 
 $capsule = new Capsule;
 $capsule->addConnection($app->get('config')['db-conf']);
+$capsule->setAsGlobal();
 $capsule->bootEloquent();
 
 $app->bind('database', $capsule);

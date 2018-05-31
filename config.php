@@ -4,7 +4,7 @@ return [
     "db-conf" => [
         "driver" => "mysql",
         "host" => "localhost",
-        "database" => "cli",
+        "database" => "db_name",
         "username" => "root",
         "password" => "",
         "charset" => "utf8"

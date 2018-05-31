@@ -7,7 +7,7 @@ use App\Core\{Request, Router};
 
 $router = new Router;
 
-require __DIR__.'/../routes.php';
+require __DIR__.'/../bootstrap/routes.php';
 
 $dispatcher = fastRoute\simpleDispatcher(function (fastRoute\RouteCollector $r){
     global $router;

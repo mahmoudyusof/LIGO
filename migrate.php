@@ -3,17 +3,45 @@
 require 'bootstrap/app.php';
 
 use App\Migrations\CreateUsersMigration;
+use App\Migrations\CreateTasksMigration;
+
+$migrants = [
+    new CreateUsersMigration,
+    new CreateTasksMigration
+];
+
+$commands = [
+    "migrate" => "migrates the tables to the database\n",
+    "migrate-refresh" => "refreshes migrations to the database\n",
+    "migrate-back" => "Rolls back all the tables\n"
+];
 
 switch ($argv[1]){
     case "migrate":
-        CreateUsersMigration::up();
-        echo "database migrated successfuly";
+        foreach($migrants as $migrant){
+            $migrant->up();
+            echo get_class($migrant) . " Migrated successfuly\n";
+        }
         break;
     case "migrate-refresh":
-        CreateUsersMigration::down();
-        CreateUsersMigration::up();
-        echo 'database migrated successfuly';
+        foreach($migrants as $migrant){
+            $migrant->down();
+            $migrant->up();
+            echo get_class($migrant) . " Re-Migrated successfuly\n";
+        }
         break;
+    case "migrate-back":
+        foreach($migrants as $migrant){
+            $migrant->down();
+            echo get_class($migrant) . " Rolled back successfuly\n";
+        }
+        break;
+    default:
+        echo "this is to help you\n\n\n";
+        foreach(array_keys($commands) as $command){
+            echo $command . " : " . $commands[$command] . "\n";
+        }
+        
 }
 
 

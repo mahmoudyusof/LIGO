@@ -6,7 +6,6 @@ use App\Core\{App, Form, Router};
 use Illuminate\Database\Capsule\Manager as Capsule;
 
 
-session_start();
 
 $app = new App();
 

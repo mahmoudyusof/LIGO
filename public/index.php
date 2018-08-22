@@ -33,7 +33,7 @@ switch ($routeinfo[0]){
                 $controller = new $routeinfo[1][0];
                 $function = $routeinfo[1][1];
                 $params = $routeinfo[2];
-    
+                
                 $controller->$function($params);
             }else{
                 $routeinfo[1]($routeinfo[2]["filename"]);
